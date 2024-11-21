@@ -201,7 +201,7 @@ class Logger extends Model
             if (preg_match('/(^|;)O:[0-9]+:/', $data)) {
                 return $data;
             }
-            return unserialize(trim($data), ['allow_classes' => false]);
+            return unserialize(trim($data), ['allowed_classes' => false]);
         }
 
         return $data;
